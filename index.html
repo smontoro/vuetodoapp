@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+	<title>To-Do App!</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body class="body">
+
+<div id="todo">
+	<h1>To-Do List</h1>
+	<section>
+		<input type="input" placeholder="what do you need to do?" v-model="newTask" v-on:keyup.enter="addTask" id="inp">
+	</section>
+
+	<ul>
+		<li v-for="task in todoList">
+			<label>{{ task }}</label>
+			<button type="button" v-on:click="removeTask(task)">X</button>
+		</li>
+	</ul>
+
+</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
